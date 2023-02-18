@@ -1,0 +1,70 @@
+    
+    
+    Implementam lista de directoare si cea de fisiere a unui director folosind
+o structura de liste simplu inlantuite generice separata. In acest fel, putem 
+folosi aceleasi functii pentru a parcurge si prelucra ambele liste. 
+
+    Pentru a creea un sistem de fisiere, rulam executabilul tema1 si scriem la
+stdin urmatoarele comenzi. Output-ul va fi scris la stdout
+
+    1. touch name
+    Comanda creaza un fisier in directorul curent. Acesta va fi adaugat la finalul 
+listei de fisiere. Aceasta primeste ca argument numele fisierului. Numele fisierului 
+nu contine ”/”(nu va reprezenta o cale). In cazul in care exista deja un 
+fisier/director cu acest nume, se va afisa mesajul de eroare "File already exists\n."
+
+    2. mkdir name
+    Comanda creaza un director in directorul curent. Acesta va fi adaugat la finalul 
+listei de fisiere. Aceasta primeste ca argument numele directorului. Numele directorului 
+nu contine ”/”(nu va reprezenta o cale). In cazul in care exista deja un fisier/director 
+cu acest nume, se va afisa mesajul de eroare "Directory already exists\n."
+
+    3. ls
+    Comanda afiseaza toate directoarele, respectiv fisierele din directorul curent. Mai 
+intai vor fi afisate numele directoarelor, apoi a fisierelor, fiecare pe un rand nou.
+
+    4. rm name
+    Comanda elimina fisierul cu numele name din directorul curent. Daca nu a fost gasit 
+niciun fisier cu numele dat, se va afisa mesajul de eroare "Could not find the file\n". 
+Numele fisierului nu contine ”/”(nu va reprezenta o cale).
+
+    5. rmdir name
+    Comanda elimina directorul cu numele name din directorul curent si toate fisierele 
+care se gasesc in acesta. Daca nu a fost gasit niciun director cu numele dat, se va afisa
+mesajul de eroare "Could not find the dir\n". 
+Numele directorului nu contine ”/”(nu va reprezenta o cale).
+
+    6. cd name
+    Comanda schimba directorul curent in directorul cu numele name, din lista de directoare 
+a directorului curent. Daca nu este gasit, se va afisa mesajul de eroare "No directories found!\n". 
+Pentru a schimba directorul curent in directorul parinte al celui curent se va folosi sirul 
+de caractere special ”..”. Daca directorul curent nu are parinte, ,atunci nu se va schimba 
+directorul curent. Numele directorului nu contine ”/”(nu va reprezenta o cale).
+
+    7. tree
+    Comanda tree afiseaza interiorul directorului curent intr-o forma arborescenta si al 
+    fiecarului director din interior.
+
+    Formatul de output este urmatorul: 4 spatii(” ”) x level + nume file/director. 
+
+    Ordinea de afisare este urmatoarea:
+        Se vor afisa mai intai numele directoarele si apoi numele fisierele
+        Numele directoarelor si al fisierelor vor fi afisate in ordinea in care au fost create
+        Dupa afisarea numelui unui director, se va afisa tot ceea ce contine acel director
+
+    8. pwd 
+    Comanda afiseaza calea de la directorul radacina(home) pana la directorul curent. 
+    Formatul aplicat pentru afisare este ”/home/(parent_name)/…./(curent-name)”.
+
+    9. mv oldname newname
+    Comanda va schimba numele directorului/fisierului oldname din directorul curent in newname. 
+Se va verifica, mai intai, daca numele oldname exista deja, in caz contrar se va afisa mesajul 
+"File/Director not found\n", iar apoi daca numele newname nu este folosit deja, in caz contrar 
+se va afisa mesajul de eroare "File/Director already exists\n". Schimbarea se va face prin 
+readaugare directorului/fisierului in lista de directoare/fisiere. In cazul directoarelor, 
+interiorul va ramane neschimbat. Numele directorului/fisierului(atat cel vechi, cat si cel nou) 
+nu contine ”/”(nu va reprezenta o cale).
+
+    9. stop
+    Aceasta comanda opreste aplicatia.
+
